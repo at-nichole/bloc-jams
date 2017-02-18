@@ -51,20 +51,6 @@ body.landing {
 	.column.lg-third { width: 33.3%; }
 	.column.lg-fourth { width: 25%; }
 	.column.lg-flow-opposite { float: right; }  
-<<<<<<< HEAD
- }
-
- @media (min-width: 640px) and (max-width: 1023px) {
-	 html { font-size: 112%; }
-	 
-	.column.sm-full { width: 100%; }
-	.column.sm-two-thirds { width: 66.7%; }
-	.column.sm-half { width: 50%; }
-	.column.sm-third { width: 33.3%; }
-	.column.sm-fourth { width: 25%; }
-	.column.sm-flow-opposite { float: right; } 
- }
-=======
  }
 
  @media (min-width: 640px) and (max-width: 1023px) {
@@ -86,5 +72,3 @@ body.landing {
 
 .clearfix::after {
    clear: both;
-
->>>>>>> checkpoint-4-assignment-clearfix
