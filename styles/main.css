@@ -69,6 +69,10 @@ body.landing {
 	margin: 0 auto;
 	max-width: 64em;
 }
+
+ .container.narrow {
+     max-width: 56rem;
+ }
  
 .column {
 	float: left;
