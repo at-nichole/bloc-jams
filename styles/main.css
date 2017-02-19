@@ -44,6 +44,11 @@ body.landing {
 		text-decoration: none;
 }
 
+.navbar-link:hover {
+background-color: white;
+color: rgb(233,50,117);
+}
+
 .links-container .navbar-link {
 		display: table-cell;
 		position: relative;
