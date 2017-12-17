@@ -27,6 +27,21 @@ var albumMarconi = {
     ]
 };
 
+var albumWarhol = {
+    title: 'The Factory',
+    artist: 'Andy Warhol',
+    label: 'Abstract',
+    year: '1965',
+    albumArtUrl: 'assets/images/album_covers/15.png',
+    songs: [
+        { title: 'Campbells Can You Help Me', duration: '1:01' },
+        { title: 'Monroe Show', duration: '5:01' },
+        { title: 'Gallstone Blues', duration: '3:21'},
+        { title: 'Lithographic Wonders', duration: '3:14' },
+        { title: 'Famous people love me', duration: '2:15'}
+    ]
+};
+
 var createSongRow = function(songNumber, songName, songLength) {
   var template =
   '<tr class="album-view-song-item">'
@@ -38,29 +53,33 @@ var createSongRow = function(songNumber, songName, songLength) {
 
     return template;
 };
-
-var setCurrentAlbum = function(album) {
+     var albumImage = document.getElementsByClassName('album-cover-art')[0];
      var albumTitle = document.getElementsByClassName('album-view-title')[0];
      var albumArtist = document.getElementsByClassName('album-view-artist')[0];
      var albumReleaseInfo = document.getElementsByClassName('album-view-release-info')[0];
-     var albumImage = document.getElementsByClassName('album-cover-art')[0];
      var albumSongList = document.getElementsByClassName('album-view-song-list')[0];
 
-
+var setCurrentAlbum = function(album) {
      albumTitle.firstChild.nodeValue = album.title;
      albumArtist.firstChild.nodeValue = album.artist;
      albumReleaseInfo.firstChild.nodeValue = album.year + ' ' + album.label;
      albumImage.setAttribute('src', album.albumArtUrl);
-
-
      albumSongList.innerHTML = '';
-
-     // #4
      for (var i = 0; i < album.songs.length; i++) {
          albumSongList.innerHTML += createSongRow(i + 1, album.songs[i].title, album.songs[i].duration);
      }
  };
 
  window.onload = function() {
-     setCurrentAlbum(albumPicasso);
+     setCurrentAlbum(albumWarhol);
+
+     var albums = [albumWarhol, albumPicasso, albumMarconi];
+     var i = 0;
+     albumImage.addEventListener("click", function(change){
+       setCurrentAlbum(albums[i]);
+       i++;
+       if (i >= albums.length) {
+         i = 0;
+       }
+     })
  };
