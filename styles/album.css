@@ -54,7 +54,8 @@
  }
 
  .song-item-number {
-     width: 8%;
+     width: 5%;
+     min-width: 30px;
      text-align: center;
  }
 
@@ -76,6 +77,8 @@
 
  .song-title-number {
    text-align: center;
+   width: 5%;
+   min-width: 30px;
  }
 
 .tbody-song-items {
@@ -101,3 +104,24 @@
          margin: auto;
      }
  }
+
+ .album-song-button {
+    text-align: center;
+    font-size: 14px;
+    background-color: white;
+    color: rgb(210, 40, 123);
+    border-radius: 50% 50%;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+}
+
+.album-song-button:hover {
+    cursor: pointer;
+    color: white;
+    background-color: rgb(210, 40, 123);
+}
+
+.album-song-button span {
+    line-height: 28px;
+}
