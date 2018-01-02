@@ -1,11 +1,11 @@
 body.landing {
-    background-color: rgb(58,23,63);
+    background-color: rgb(28,34,45);
 }
 
 .hero-content {
     position: relative;
     min-height: 600px;
-    background-image: url(../assets/images/bloc_jams_bg.jpg);
+    background-image: url(../assets/images/BlocJamsBG2.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
