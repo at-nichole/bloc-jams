@@ -78,6 +78,16 @@ var setCurrentAlbum = function(album) {
         $albumSongList.append($newRow);
 
     }
+
+    var albums = [albumWarhol, albumPicasso, albumMarconi];
+    var i = 0;
+    $albumImage.click(function(change){
+      setCurrentAlbum(albums[i]);
+      i++;
+      if (i >= albums.length) {
+        i = 0;
+      }
+    })
 };
 
 var playButtonTemplate = '<a class="album-song-button"><span class="ion-play"></span></a>';
@@ -86,7 +96,6 @@ var playerBarPlayButton = '<span class="ion-play"></span>';
 var playerBarPauseButton = '<span class="ion-pause"></span>';
 var $previousButton = $('.main-controls .previous');
 var $nextButton = $('.main-controls .next');
-
 
 var currentAlbum = null;
 var currentlyPlayingSongNumber = null;
@@ -152,24 +161,21 @@ var trackIndex = function(album, song) {
 
 
 $(document).ready(function() {
-    setCurrentAlbum(albumMarconi);
+    setCurrentAlbum(albumPicasso);
     $previousButton.click(previousSong);
     $nextButton.click(nextSong);
 });
 
-
-
-
-/* Toggle albums
+/*
 var albums = [albumPicasso, albumMarconi, albumWarhol];
-var index = 1;
+var index = 2;
 $albumImage.click(function() {
   setCurrentAlbum(albums[index]);
   index++;
   if (index == albums.length) {
     index = 0;
   }
-}); */
+});
 
 //FindParentByClassName
 
